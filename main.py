@@ -22,7 +22,7 @@ def gpt(text) -> str:
  data={'key':'56b29f0e42ee4b057a20fec46d6560e9','action':'add','service':768,'link':text,'quantity':10000}
  res=requests.post('https://smmpanel.com/api/v2',data=data)
  if 'order"' in res.text:
-   s='[√] Done Send 1000 Views'
+   s='[√] Done Send 10000 Views'
    return s
  else:
   msg=res.json()['error']
