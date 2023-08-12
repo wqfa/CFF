@@ -3,7 +3,7 @@ from telebot import types
 bot = telebot.TeleBot("6431865078:AAHhPS-hu0MYZ57zoo7Q-c1Z2KXAeUo5je0")
 @bot.message_handler(commands=['start'])
 def handle_start(message):
-    data={'key':'56b29f0e42ee4b057a20fec46d6560e9','action':'balance'}
+    data={'key':'c22d7f5abca4f5ce210049a0fc34fe4a','action':'balance'}
     res=requests.post('https://smmpanel.com/api/v2',data=data).json()
     balance=float(res['balance'])
     views=str(balance/0.0000001).split('.')[0]
